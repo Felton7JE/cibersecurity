@@ -106,3 +106,10 @@ body{
         z-index: 2;
     }
 }
+
+
+
+ .icon{    
+font-size: 20px; /* Define o tamanho do ícone */
+  color: white; /* Define a cor do ícone */
+ }
