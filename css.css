@@ -1,3 +1,439 @@
+/* 
+---------------------------------------------
+About Us Style
+--------------------------------------------- 
+*/
+
+#about {
+  margin-top: 120px;
+}
+
+.about-us {
+  background-image: url(../images/about-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 140px 0px 120px 0px;
+}
+
+.about-us .left-image {
+  margin-right: 45px;
+}
+
+.about-us .services .item {
+  margin-bottom: 30px;
+}
+
+.about-us .services .item .icon {
+  float: left;
+  margin-right: 25px;
+}
+
+.about-us .services .item .icon img {
+  max-width: 70px;
+}
+
+.about-us .services .item h4 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-us .services .item p {
+  color: black;
+}
+
+
+/* Media Queries for About Us */
+@media (max-width: 992px) {
+  .about-us {
+    padding: 100px 0;
+  }
+
+  .about-us .left-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .about-us .left-image img {
+    width: 100%; /* Make image responsive */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 80px 0;
+  }
+  .about-us .services .item h4 {
+    font-size: 18px;
+  }
+  .about-us .services .item p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-us {
+    padding: 60px 0;
+  }
+  .about-us .services .item .icon {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .about-us .services .item .icon img {
+    max-width: 50px;
+  }
+  .about-us .services .item {
+    text-align: center;
+  }
+
+}
+
+
+
+/* 
+---------------------------------------------
+Services Style
+--------------------------------------------- 
+*/
+
+.our-services {
+  margin-top: 0px;
+  padding-top: 120px;
+}
+
+.our-services .left-image {
+  margin-right: 45px;
+}
+
+.our-services .section-heading h2 {
+  margin-right: 100px;
+}
+
+.our-services .section-heading p {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.our-services .progress-skill-bar {
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.our-services .progress-skill-bar span {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #03a4ed;
+}
+
+.our-services .first-bar span {
+  left: 69%;
+}
+
+.our-services .second-bar span {
+  left: 81%;
+}
+
+.our-services .third-bar span {
+  left: 88%;
+}
+
+.our-services .progress-skill-bar h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 14px;
+}
+
+.our-services .progress-skill-bar .full-bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #f7eff1;
+  position: relative;
+  z-index: 1;
+}
+
+.our-services .progress-skill-bar .filled-bar {
+  background: rgb(255,77,30);
+  background: linear-gradient(105deg, rgba(255,77,30,1) 0%, rgba(255,44,109,1) 100%);
+  height: 6px;
+  border-radius: 3px;
+  margin-bottom: -6px;
+  position: relative;
+  z-index: 2;
+}
+
+.our-services .first-bar .filled-bar {
+  width: 71%;
+}
+
+.our-services .second-bar .filled-bar {
+  width: 83%;
+}
+
+.our-services .third-bar .filled-bar {
+  width: 90%;
+}
+
+
+/* Media Queries for Our Services */
+@media (max-width: 992px) {
+  .our-services {
+    padding-top: 80px;
+  }
+
+  .our-services .left-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .our-services .left-image img {
+    width: 100%;
+  }
+
+  .our-services .section-heading h2 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-services {
+    padding-top: 60px;
+  }
+
+  .our-services .section-heading p {
+    margin-bottom: 40px;
+  }
+
+  .our-services .progress-skill-bar span {
+    font-size: 16px;
+  }
+
+  .our-services .progress-skill-bar h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .our-services .progress-skill-bar span {
+    left: auto;
+    right: 0;
+  }
+
+  /* Adjust the left positions so they don't overlap on smaller screens.  You might need to adjust these numbers based on your content. */
+  .our-services .first-bar span {
+    /* Use left: auto to allow right:0 to take precedence. Alternatively, provide an explicit value */
+  }
+
+  .our-services .second-bar span {
+    /* Use left: auto to allow right:0 to take precedence. Alternatively, provide an explicit value */
+  }
+
+  .our-services .third-bar span {
+    /* Use left: auto to allow right:0 to take precedence. Alternatively, provide an explicit value */
+  }
+
+
+}
+
+
+/* 
+---------------------------------------------
+contact
+--------------------------------------------- 
+*/
+
+.contact-us {
+  padding: 160px 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.contact-us .section-heading h2,
+.contact-us .section-heading h2 em,
+.contact-us .section-heading h2 span {
+  color: black;
+}
+
+.contact-us .section-heading p {
+  color: black;
+  margin-top: 30px;
+}
+
+.phone-info {
+  margin-top: 40px;
+}
+
+.phone-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.phone-info h4 span i {
+  width: 46px;
+  height: 46px;
+  display: inline-block;
+  text-align: center;
+  line-height: 46px;
+  background-color:   #201e3b;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+.phone-info h4 span a {
+  color:  #2a2a2a;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+form#contact .contact-dec {
+  position: absolute;
+  right: -166px;
+  bottom: 0;
+}
+
+form#contact .contact-dec img {
+  max-width: 178px;
+}
+
+form#contact {
+  margin-left: 30px;
+  position: relative;
+  background-color:  #2a2a2a;
+  padding: 60px 30px;
+  border-radius: 20px;
+}
+
+form#contact input {
+  width: 100%;
+  height: 46px;
+  border-radius: 33px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 300;
+  color: #2a2a2a;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+form#contact input::placeholder {
+  color: #2a2a2a;
+}
+
+form#contact textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 180px;
+  min-height: 140px;
+  height: 140px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 300;
+  color: #2a2a2a;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+form#contact textarea::placeholder {
+  color: #2a2a2a;
+}
+
+form#contact button {
+  display: inline-block;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  border: none;
+  outline: none;
+  transition: all .3s;
+}
+
+form#contact button:hover {
+  background-color: #2a2a2a;
+}
+
+
+/* Media Queries for Contact */
+@media (max-width: 992px) {
+  .contact-us {
+    padding: 120px 0;
+  }
+
+  form#contact {
+    margin-left: 0;
+  }
+
+  form#contact .contact-dec {
+    display: none; /* Hide the decorative image on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    padding: 100px 0;
+  }
+
+  .phone-info h4 {
+    font-size: 18px;
+  }
+
+  .phone-info h4 span i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  form#contact {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-us {
+    padding: 80px 0;
+  }
+
+  .phone-info h4 {
+    font-size: 16px;
+  }
+
+  .phone-info h4 span a {
+    font-size: 14px;
+  }
+}
+
+/* 
+---------------------------------------------
+General Styles and Container
+--------------------------------------------- 
+*/
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -63,6 +499,12 @@ body {
 .item p {
   font-size: 20px;
 }
+
+/* 
+---------------------------------------------
+Section Styles
+--------------------------------------------- 
+*/
 
 .section {
   width: 100%;
@@ -151,6 +593,112 @@ body {
   margin: 0;
 }
 
+/* Media Queries for Sections and General Layout */
+
+@media (max-width: 992px) {
+    .left {
+        padding: 40px; /* Reduce padding for smaller screens */
+    }
+
+    .right {
+        padding: 30px;  /*Reduce padding for smaller screens */
+    }
+
+    .title {
+        font-size: 36px; /* Decrease title size on smaller screens */
+    }
+
+    .item p {
+        font-size: 18px; /*Adjust item paragraph size */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /*Stack the left and right sections vertically */
+        height: auto;  /* Allow content to dictate height */
+    }
+
+    .left, .right {
+        flex: none; /*Reset flex values */
+        width: 100%; /* Take up full width */
+        padding: 30px;  /*Consistent padding */
+    }
+
+     .left {
+        background-position: top center; /*Adjust background image */
+        background-size: cover; /* Ensure full coverage*/
+        min-height: 300px; /*Provide a minimum height so the background is visible */
+    }
+
+    .title {
+        font-size: 30px;  /* Further reduce font size */
+    }
+    .section-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .left, .right {
+        padding: 20px; /*Further reduced padding */
+    }
+
+    .title {
+        font-size: 24px; /*Smallest title size */
+    }
+
+    .logo {
+        font-size: 20px; /*Adjust logo size */
+        margin-bottom: 20px;
+    }
+
+    .item {
+        flex-direction: column; /*Stack icon and text vertically*/
+        text-align: center;  /* Center align the text */
+    }
+
+    .item p {
+        font-size: 16px; /* Smallest paragraph size */
+    }
+
+    .icon {
+        margin-bottom: 10px; /*Add some space below the icon */
+    }
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-desc {
+        font-size: 18px;
+    }
+    .section {
+        padding: 40px 0; /* Reduced padding for sections */
+    }
+}
+
+
+/* Existing container media queries.  Keep these at the end for specificity */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left h1 {
+    font-size: 1.8rem;
+  }
+  
+  .right {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .right {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .section-items {
     flex-direction: column;
@@ -161,3 +709,131 @@ body {
   }
 }
 
+/* Your existing CSS (including the container styles) should be in place.
+   This CSS is specifically to address the responsiveness of this component. */
+
+/* Default styles for the container and its children (from your previous CSS, repeated here for completeness) */
+.container {
+  display: flex;
+  height: 100vh; /* Consider removing this, it can cause issues on smaller screens */
+  background: white;
+  padding: 2rem 5%; /* Added padding for visual spacing */
+}
+
+.left {
+  flex: 1;
+  padding: 60px;
+  background-image: url('ciber.png'); /* Replace with your actual image */
+  background-size: 800px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  background-color: #201e3b;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Added: Make icon color visible */
+}
+
+.icon i {
+  font-size: 2em; /* Keep the font size relative.  You might need to adjust this based on the icon library you're using */
+}
+
+.item p {
+  font-size: 20px;
+}
+
+/*  Responsiveness (Media Queries) */
+
+/* Medium screens (Tablets and smaller desktops - adjust the max-width to suit your layout) */
+@media (max-width: 992px) {
+  .container {
+    padding: 1.5rem 3%; /* Reduced padding */
+    height: auto; /* Allow the container to grow vertically */
+    min-height: 500px; /* set to your preference */
+  }
+
+  .left {
+    padding: 40px;
+    background-size: 600px auto; /* Slightly smaller background */
+  }
+
+  .right {
+    padding: 30px;
+    gap: 30px; /* Reduced gap between items */
+  }
+
+  .item p {
+    font-size: 18px;
+  }
+}
+
+/* Small screens (Phones) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack left and right sections vertically */
+    padding: 1rem 2%;
+  }
+
+  .left {
+    width: 100%; /* Take full width */
+    padding: 30px;
+    background-position: top center;
+    background-size: cover; /* Ensure full coverage for the background */
+    min-height: 300px;
+  }
+
+  .right {
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .item {
+    flex-direction: column; /* Stack icon and text */
+    text-align: center; /* Center the text */
+  }
+
+  .icon {
+    margin-bottom: 10px; /* Add space below the icon */
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .left {
+    padding: 20px;
+  }
+
+  .right {
+    padding: 15px;
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+}
