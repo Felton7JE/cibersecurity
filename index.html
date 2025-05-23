@@ -151,8 +151,53 @@
                 display: block;
             }
         }
-    </style>
 
+        /* Estilo para a seção de upload da capa */
+        #upload-capa {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        #upload-capa input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        #upload-capa img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-top: 10px;
+        }
+
+        .versao-personalizada-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            /* Centraliza os cards */
+        }
+
+        .versao-personalizada-card {
+            border: 1px solid #fff;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .versao-personalizada-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .versao-personalizada-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
 
 </head>
 
@@ -290,6 +335,7 @@
         </div>
     </section>
 
+
     <section id="dicas" class="our-services section">
         <div class="container">
             <div class="row flex-row-reverse align-items-center">
@@ -359,6 +405,8 @@
                     </div>
                     <p>Deseja a edição da sua empresa do ebook, clique aqui e faça sua requisição.</p>
                     <button
+                        type="button"
+                        onclick="preencherAssunto('Solicito edição personalizada do ebook para minha empresa')"
                         style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #201e3b; color: white; border-radius: 5px; cursor: pointer;">
                         Enviar solicitação
                     </button>
@@ -371,6 +419,8 @@
                     </div>
                     <p>Apoie a causa e seja um parceiro ou financiador</p>
                     <button
+                        type="button"
+                        onclick="preencherAssunto('Quero ser parceiro ou financiador do projeto de cibersegurança')"
                         style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #201e3b; color: white; border-radius: 5px; cursor: pointer;">
                         Enviar solicitação
                     </button>
@@ -383,14 +433,76 @@
                     </div>
                     <p>Ajude o projeto e faça uma doação</p>
                     <button
+                        type="button"
+                        onclick="preencherAssunto('Quero ajudar o projeto com uma doação')"
                         style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #201e3b; color: white; border-radius: 5px; cursor: pointer;">
                         Enviar solicitação
                     </button>
                 </div>
 
+                <div class="item"
+                    style="background-color: #f9f9f9; padding: 20px; flex: 1 1 250px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div class="icon" style="margin-bottom: 10px;">
+                        <i class="fas fa-chalkboard-teacher fa-2x" style="width: 40px; height: 40px;"></i>
+                    </div>
+                    <p>Se deseja marcar uma palestra /workshop de cybersecurity com nossa equipe para seus colaboradores, contate já.</p>
+                    <button
+                        type="button"
+                        onclick="preencherAssunto('Gostaria de agendar uma palestra ou workshop de cybersecurity para meus colaboradores')"
+                        style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #201e3b; color: white; border-radius: 5px; cursor: pointer;">
+                        Enviar solicitação
+                    </button>
+                </div>
             </div>
         </div>
     </section>
+
+    
+  <section id="upload-capa" style="background-color: #fff;">
+    <h2>Versões Personalizadas do Ebook</h2>
+
+    <div class="versao-personalizada-container">
+        <div class="versao-personalizada-card">
+            <img src="bls_version.png" alt="Versão Personalizada BLS">
+            <p>Versão BLS</p>
+        </div>
+
+        <div class="versao-personalizada-card">
+            <img src="geral_version.png" alt="Versão Personalizada RISA">
+            <p>Versão Geral</p>
+        </div>
+    </div>
+
+    <style>
+        .versao-personalizada-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center; /* Centraliza os cards */
+        }
+
+        .versao-personalizada-card {
+            border: 1px solid #fff;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        .versao-personalizada-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .versao-personalizada-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</section>
+
 
     <!-- Nova Section: Contato -->
     <section id="contact" class="contact-us section">
@@ -410,34 +522,39 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form id="contact" action="" method="post">
+                <form id="contact-form" action="javascript:void(0);" method="post" onsubmit="sendMail(); return false;" style="background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 30px 20px; margin: 30px 0;">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="margin-bottom: 15px;">
                             <fieldset>
-                                <input type="name" name="name" id="name" placeholder="Nome" autocomplete="on" required>
+                                <input type="text" name="name" id="name" placeholder="Nome" autocomplete="on" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #e0e0e0;">
                             </fieldset>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="margin-bottom: 15px;">
                             <fieldset>
-                                <input type="surname" name="surname" id="surname" placeholder="Apelido"
-                                    autocomplete="on" required>
+                                <input type="text" name="surname" id="surname" placeholder="Apelido"
+                                    autocomplete="on" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #e0e0e0;">
                             </fieldset>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="margin-bottom: 15px;">
                             <fieldset>
-                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                    placeholder="Seu Email" required="">
+                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                    placeholder="Seu Email" required="" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #e0e0e0;">
                             </fieldset>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="margin-bottom: 15px;">
+                            <fieldset>
+                                <input type="text" name="subject" id="subject" placeholder="Assunto" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #e0e0e0;">
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12" style="margin-bottom: 15px;">
                             <fieldset>
                                 <textarea name="message" type="text" class="form-control" id="message"
-                                    placeholder="Escreva aqui a sua mensagem..." required=""></textarea>
+                                    placeholder="Escreva aqui a sua mensagem..." required="" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #e0e0e0; min-height: 120px;"></textarea>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <button type="submit" id="form-submit" class="main-button ">Enviar Mensagem</button>
+                                <button type="submit" id="form-submit" class="main-button" style="width: 100%; background: #201e3b; color: #fff; border: none; border-radius: 5px; padding: 12px 0; font-size: 1.1em; font-weight: 600; transition: background 0.2s;">Enviar Mensagem</button>
                             </fieldset>
                         </div>
                     </div>
@@ -472,9 +589,11 @@
         </ul>
         <ul class="menu">
             <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#ebook">Serviços</a></li>
-            <li class="menu__item"><a class="menu__link" href="#dicas">Projetos</a></li>
-            <li class="menu__item"><a class="menu__link" href="#contact">Contato</a></li>
+            <li class="menu__item"><a class="menu__link" href="#ebook">Dicas</a></li>
+            <li class="menu__item"><a class="menu__link" href="#dicas">Download Ebook</a></li>
+            <li class="menu__item"><a class="menu__link" href="#apoie">Apoie</li>
+            <li class="menu__item"><a class="menu__link" href="#contact">Contacto</li>
+
 
         </ul>
         <p>©2025 Felton da Silva | Todos os direitos reservados</p>
@@ -495,7 +614,66 @@
                     navLinks.classList.remove('nav-active');
                 }
             });
+
+            // Lógica para visualização da imagem da capa
+            const capaInput = document.getElementById('capa-input');
+            const capaPreview = document.getElementById('capa-preview');
+
+            capaInput.addEventListener('change', function () {
+                const file = this.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.addEventListener('load', function () {
+                        capaPreview.setAttribute('src', this.result);
+                        capaPreview.style.display = 'block';
+                    });
+
+                    reader.readAsDataURL(file);
+                } else {
+                    capaPreview.setAttribute('src', '#');
+                    capaPreview.style.display = 'none';
+                }
+            });
         });
+
+        // Função para preencher o campo assunto e focar o formulário de contato
+        function preencherAssunto(texto) {
+            document.getElementById('subject').value = texto;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('name').focus();
+        }
+
+        // Função para enviar o email usando emailjs
+        function sendMail() {
+            let parms = {
+                name: document.getElementById("name").value + " " + (document.getElementById("surname").value || ""),
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            };
+
+            emailjs.send("service_d3lkz3d", "template_6en13hz", parms).then(function (res) {
+                showSuccessMessage("Email enviado com sucesso!");
+                document.getElementById("contact-form").reset();
+            });
+        }
+
+        // Função para exibir mensagem de sucesso na tela
+        function showSuccessMessage(msg) {
+            let div = document.createElement('div');
+            div.className = 'email-success-message';
+            div.innerText = msg;
+            document.body.appendChild(div);
+            setTimeout(() => {
+                div.classList.add('show');
+            }, 10);
+            setTimeout(() => {
+                div.classList.remove('show');
+                setTimeout(() => div.remove(), 400);
+            }, 3000);
+        }
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
